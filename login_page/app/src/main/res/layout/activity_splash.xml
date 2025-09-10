@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#FFC107"
+    tools:context=".SplashActivity">
+
+
+    <ImageView
+        android:id="@+id/mainArticleImage"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="India Street Vendor Forum Image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/avatar" />
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Welcome To"
+        android:textColor="@color/dark_blue_button"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/ToTextView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="0dp"-->
+<!--        android:fontFamily="sans-serif-medium"-->
+
+<!--        android:text="To"-->
+<!--        android:textColor="@color/drawer_background_blue"-->
+<!--        android:textSize="36sp"-->
+<!--        android:textStyle="bold" />-->
+
+    <TextView
+        android:id="@+id/aapkaSathiTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Aapka Sathi"
+
+        android:textColor="#FFFFFF"
+        android:textSize="45sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

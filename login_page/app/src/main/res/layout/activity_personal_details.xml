@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow_background"
+    tools:context=".PersonalDetailsActivity">
+
+    <!-- Back Button (Arrow Icon Only) -->
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/back_button_description"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/dark_blue_button" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/personal_details_title"
+        android:textColor="@color/dark_blue_button"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fullNameLabel"
+        style="@style/LabelTextStyle"
+        android:text="@string/full_name_label"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+    <EditText
+        android:id="@+id/fullNameEditText"
+        style="@style/EditTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:inputType="textPersonName"
+        android:background="@drawable/rounded_edittext_background2"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fullNameLabel" />
+
+    <TextView
+        android:id="@+id/fatherNameLabel"
+        style="@style/LabelTextStyle"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/father_name_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fullNameEditText" />
+
+    <EditText
+        android:id="@+id/fatherNameEditText"
+        style="@style/EditTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:inputType="textPersonName"
+        android:background="@drawable/rounded_edittext_background2"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fatherNameLabel" />
+
+    <TextView
+        android:id="@+id/fullAddressLabel"
+        style="@style/LabelTextStyle"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/full_address_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fatherNameEditText" />
+
+    <EditText
+        android:id="@+id/fullAddressEditText"
+        style="@style/EditTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:gravity="center|start"
+        android:inputType="textMultiLine"
+        android:lines="3"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,. 0987654321 "
+        android:background="@drawable/rounded_edittext_background2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fullAddressLabel" />
+
+    <TextView
+        android:id="@+id/phoneNoLabel"
+        style="@style/LabelTextStyle"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/phone_no_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fullAddressEditText" />
+
+    <EditText
+        android:id="@+id/phoneNoEditText"
+        style="@style/EditTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:inputType="phone"
+        android:background="@drawable/rounded_edittext_background2"
+        android:maxLength="10"
+        android:digits="0123456789"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phoneNoLabel" />
+
+    <TextView
+        android:id="@+id/genderLabel"
+        style="@style/LabelTextStyle"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/gender_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phoneNoEditText" />
+
+    <Spinner
+        android:id="@+id/genderSpinner"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/rounded_edittext_background2"
+        android:entries="@array/gender_options"
+        android:prompt="@string/select_gender_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/genderLabel" />
+
+    <TextView
+        android:id="@+id/dobLabel"
+        style="@style/LabelTextStyle"
+        android:layout_marginStart="24dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/date_of_birth_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/genderSpinner" />
+
+    <EditText
+        android:id="@+id/dobEditText"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_edittext_background2"
+        android:hint="@string/date_format_hint"
+        android:inputType="date"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey_hint"
+        app:layout_constraintEnd_toStartOf="@id/ageEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dobLabel" />
+
+    <TextView
+        android:id="@+id/ageLabel"
+        style="@style/LabelTextStyle"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/age_label"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/dobEditText"
+        app:layout_constraintTop_toTopOf="@id/dobLabel" />
+
+    <EditText
+        android:id="@+id/ageEditText"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/rounded_edittext_background2"
+        android:inputType="number"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dobEditText"
+        app:layout_constraintTop_toBottomOf="@id/ageLabel" />
+
+    <TextView
+        android:id="@+id/aadharNumberLabel"
+        style="@style/LabelTextStyle"
+        android:text="@string/aadhar_number_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dobEditText" />
+
+    <EditText
+        android:id="@+id/aadharNumberEditText"
+        style="@style/EditTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:inputType="number"
+        android:maxLength="12"
+        android:digits="0123456789"
+    android:background="@drawable/rounded_edittext_background2"
+    android:fontFamily="sans-serif-medium"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/aadharNumberLabel" />
+
+    <TextView
+        android:id="@+id/personalPhotoLabel"
+        style="@style/LabelTextStyle"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/personal_photo_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/aadharNumberEditText" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/personalPhotoButton"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/white"
+        android:text="@null"
+        app:cornerRadius="8dp"
+        app:icon="@drawable/baseline_cloud_upload_24"
+        app:iconGravity="textStart"
+        app:iconTint="@color/dark_blue_button"
+        app:layout_constraintEnd_toStartOf="@id/aadharPhotoButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/personalPhotoLabel" />
+
+    <TextView
+        android:id="@+id/aadharPhotoLabel"
+        style="@style/LabelTextStyle"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/aadhar_photo_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/personalPhotoButton"
+        app:layout_constraintTop_toTopOf="@id/personalPhotoLabel" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/aadharPhotoButton"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/white"
+        android:text="@null"
+        app:cornerRadius="8dp"
+        app:icon="@drawable/baseline_cloud_upload_24"
+        app:iconGravity="textStart"
+        app:iconTint="@color/dark_blue_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/personalPhotoButton"
+        app:layout_constraintTop_toBottomOf="@id/aadharPhotoLabel" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveNextButton"
+        android:layout_width="243dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/dark_blue_button"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/save_and_next_button"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

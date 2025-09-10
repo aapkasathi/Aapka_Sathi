@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow_background"
+    tools:context=".BusinessDetailsActivity">
+
+    <!-- Back Button (Arrow Icon Only) -->
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/back_button_description"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#000066" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/business_details_title"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/dark_blue_button"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/businessNameLabel"
+        style="@style/LabelTextStyle"
+        android:text="@string/business_name_label"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+    <EditText
+        android:id="@+id/businessNameEditText"
+        style="@style/EditTextStyle"
+        android:inputType="textCapWords"
+        android:background="@drawable/rounded_edittext_background2"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/businessNameLabel" />
+
+    <TextView
+        android:id="@+id/businessTypeLabel"
+        style="@style/LabelTextStyle"
+        android:text="@string/business_type_label"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/businessNameEditText" />
+
+    <Spinner
+        android:id="@+id/businessTypeSpinner"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/rounded_edittext_background2"
+        android:layout_marginTop="8dp"
+        android:entries="@array/business_type_options"
+        android:prompt="@string/select_business_type_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/businessTypeLabel" />
+
+    <TextView
+        android:id="@+id/locationCartLabel"
+        style="@style/LabelTextStyle"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/location_of_cart_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/businessTypeSpinner" />
+
+    <EditText
+        android:id="@+id/locationCartEditText"
+        style="@style/EditTextStyle"
+        android:background="@drawable/rounded_edittext_background2"
+        android:inputType="textPostalAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/locationCartLabel" />
+
+    <TextView
+        android:id="@+id/licensesLabel"
+        style="@style/LabelTextStyle"
+        android:text="@string/licenses_label"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/locationCartEditText" />
+
+    <Spinner
+        android:id="@+id/licensesSpinner"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_edittext_background2"
+        android:entries="@array/licenses_options"
+        android:prompt="@string/select_licenses_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/licensesLabel" />
+
+    <TextView
+        android:id="@+id/howLongVendorLabel"
+        style="@style/LabelTextStyle"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/how_long_vendor_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/licensesSpinner" />
+
+<!--    <EditText-->
+<!--        android:id="@+id/howLongVendorEditText"-->
+<!--        style="@style/EditTextStyle"-->
+<!--        android:inputType="text"-->
+<!--        android:background="@drawable/rounded_edittext_background2"-->
+<!--        android:hint="e.g., 5 years, 6 months"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/howLongVendorLabel" />-->
+    <EditText
+        android:id="@+id/howLongVendorEditText"
+        style="@style/EditTextStyle"
+        android:inputType="date"
+        android:background="@drawable/rounded_edittext_background2"
+        android:hint="@string/date_format_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/howLongVendorLabel" />
+
+    <TextView
+        android:id="@+id/photoCartLabel"
+        style="@style/LabelTextStyle"
+        android:text="@string/photo_of_cart_label"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/howLongVendorEditText" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/photoCartButton"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/white"
+        android:text="@null"
+        app:cornerRadius="8dp"
+        app:icon="@drawable/baseline_cloud_upload_24"
+        app:iconGravity="textStart"
+        app:iconTint="@color/dark_blue_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/photoCartLabel" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveNextButton"
+        android:layout_width="209dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="120dp"
+        android:backgroundTint="@color/dark_blue_button"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/save_and_next_button"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    >
+
+    <!--    android:background="@drawable/rounded_edittext_background"-->
+
+
+    <ImageView
+        android:layout_width="144dp"
+        android:layout_height="82dp"
+        android:paddingLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/img1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:paddingLeft="20dp"
+        android:paddingBottom="20dp"
+        android:text="Aapka Sathi"
+        android:textColor="#0B0B0A"
+        android:textSize="24sp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="4dp"
+        android:background="@drawable/line_divider" />
+
+
+</LinearLayout>

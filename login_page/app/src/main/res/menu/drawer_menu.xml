@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:title="Dashboard">
+        <menu>
+            <item
+            android:id="@+id/nav_dashboard"
+            android:title="Dashboard"
+            android:icon="@drawable/outline_home_app_logo_24">
+            </item>
+        </menu>
+        </item>
+<!--        <item-->
+<!--            android:id="@+id/nav_my_profile"-->
+<!--            android:title="My Profile"-->
+<!--            android:icon="@drawable/outline_person_24">-->
+<!--        </item>-->
+    </group>
+    <group android:checkableBehavior="single">
+        <item android:title="Licenses &amp; Certificates">
+            <menu>
+                <item
+                    android:id="@+id/nav_licenses"
+                    android:title="Licenses"
+                    android:icon="@drawable/license_24">
+                </item>
+                <item
+                    android:id="@+id/nav_certificates"
+                    android:title="Certificates"
+                    android:icon="@drawable/certificate_24">
+                </item>
+            </menu>
+        </item>
+    </group>
+    <group android:checkableBehavior="single">
+        <item android:title="Information Section">
+            <menu>
+                <item
+                android:id="@+id/nav_policies"
+                android:title="Policies"
+                android:icon="@drawable/outline_policy_24">
+                </item>
+                <item
+                android:id="@+id/nav_licenses_info"
+                android:title="Licenses_Info."
+                android:icon="@drawable/license_24">
+            </item>
+            </menu>
+        </item>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="Others">
+            <menu>
+
+                <item
+                    android:id="@+id/nav_training"
+                    android:title="Training"
+                    android:icon="@drawable/outline_model_training_24">
+                </item>
+                <item
+                    android:id="@+id/nav_help_support"
+                    android:title="Help &amp; Support"
+                    android:icon="@drawable/outline_help_support_24">
+                </item>
+                <item
+                    android:id="@+id/nav_setting"
+                    android:title="Setting"
+                    android:icon="@drawable/baseline_settings_24">
+                </item>
+                <item
+                    android:id="@+id/nav_log_out"
+                    android:title="Logout"
+                    android:icon="@drawable/logout_icon">
+                </item>
+            </menu>
+        </item>
+    </group>
+
+
+
+
+
+
+</menu>

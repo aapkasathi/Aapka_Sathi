@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow_background"
+    tools:context=".BankDetailsActivity">
+
+    <!-- Back Button (Arrow Icon Only) -->
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/back_button_description"
+        android:src="@drawable/baseline_arrow_back_24"
+        android:tint="@color/dark_blue_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/bank_account_details_title"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/dark_blue_button"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bankDetailsAvailableLabel"
+        style="@style/LabelTextStyle"
+        android:text="@string/bank_details_available_label"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+    <Spinner
+        android:id="@+id/bankDetailsAvailableSpinner"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_edittext_background2"
+        android:entries="@array/bank_details_options"
+        android:prompt="@string/select_bank_details_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bankDetailsAvailableLabel" />
+
+    <TextView
+        android:id="@+id/accountNumberLabel"
+        style="@style/LabelTextStyle"
+        android:text="@string/account_number_label"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bankDetailsAvailableSpinner"
+        android:visibility="gone" /> <!-- ADDED/MODIFIED -->
+
+    <EditText
+        android:id="@+id/accountNumberEditText"
+        style="@style/EditTextStyle"
+        android:inputType="number"
+        android:background="@drawable/rounded_edittext_background2"
+        android:maxLength="15"
+        android:digits="012345678901234"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/accountNumberLabel"
+        android:visibility="gone" /> <!-- ADDED/MODIFIED -->
+
+    <TextView
+        android:id="@+id/ifscCodeLabel"
+        style="@style/LabelTextStyle"
+        android:text="@string/ifsc_code_label"
+        android:fontFamily="sans-serif-medium"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/accountNumberEditText"
+        android:visibility="gone" /> <!-- ADDED/MODIFIED -->
+
+    <EditText
+        android:id="@+id/ifscCodeEditText"
+        style="@style/EditTextStyle"
+        android:inputType="textCapCharacters"
+        android:background="@drawable/rounded_edittext_background2"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 0987654321"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ifscCodeLabel"
+        android:visibility="gone" /> <!-- ADDED/MODIFIED -->
+
+    <TextView
+        android:id="@+id/accountHolderNameLabel"
+        style="@style/LabelTextStyle"
+        android:text="@string/account_holder_name_label"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ifscCodeEditText"
+        android:visibility="gone" /> <!-- ADDED/MODIFIED -->
+
+    <EditText
+        android:id="@+id/accountHolderNameEditText"
+        style="@style/EditTextStyle"
+        android:inputType="textPersonName"
+        android:background="@drawable/rounded_edittext_background2"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/accountHolderNameLabel"
+        android:visibility="gone" /> <!-- ADDED/MODIFIED -->
+
+    <TextView
+        android:id="@+id/passbookPhotoLabel"
+        style="@style/LabelTextStyle"
+        android:text="@string/passbook_photo_label"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/accountHolderNameEditText"
+        android:visibility="gone" /> <!-- ADDED/MODIFIED -->
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/passbookPhotoButton"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/white"
+        android:text="@null"
+        app:cornerRadius="8dp"
+        app:icon="@drawable/baseline_cloud_upload_24"
+        app:iconGravity="textStart"
+        app:iconTint="@color/dark_blue_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passbookPhotoLabel"
+        android:visibility="gone" /> <!-- ADDED/MODIFIED -->
+
+    <CheckBox
+        android:id="@+id/termsCheckBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/terms_and_conditions_text"
+        android:textColor="@color/text_color_dark"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passbookPhotoButton"
+        android:visibility="gone" /> <!-- ADDED/MODIFIED -->
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submitButton"
+        android:layout_width="209dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/dark_blue_button"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/submit_button"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/termsCheckBox"
+        app:layout_constraintVertical_bias="0.043" /> <!-- ADDED/MODIFIED -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="business_type_options">
+        <item>@string/select_business_type_hint</item> <item>Retail</item>
+        <item>Wholesale</item>
+        <item>Service</item>
+        <item>Manufacturing</item>
+    </string-array>
+
+    <string-array name="licenses_options">
+        <item>@string/select_licenses_hint</item> <item>FSSAI</item>
+        <item>Shop &amp; Establishment</item>
+        <item>GSTIN</item>
+        <item>None</item>
+        <item>Other</item>
+    </string-array>
+</resources>

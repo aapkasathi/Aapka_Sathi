@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="businessNameLabel" type="id" />
+    <item name="businessNameEditText" type="id" />
+    <item name="businessTypeLabel" type="id" />
+    <item name="businessTypeSpinner" type="id" />
+    <item name="locationCartLabel" type="id" />
+    <item name="locationCartEditText" type="id" />
+    <item name="licensesLabel" type="id" />
+    <item name="licensesSpinner" type="id" />
+    <item name="howLongVendorLabel" type="id" />
+    <item name="howLongVendorEditText" type="id" />
+    <item name="photoCartLabel" type="id" />
+    <item name="bankDetailsAvailableLabel" type="id" />
+    <item name="bankDetailsAvailableSpinner" type="id" />
+    <item name="accountNumberLabel" type="id" />
+    <item name="accountNumberEditText" type="id" />
+    <item name="ifscCodeLabel" type="id" />
+    <item name="ifscCodeEditText" type="id" />
+    <item name="accountHolderNameLabel" type="id" />
+    <item name="accountHolderNameEditText" type="id" />
+    <item name="passbookPhotoLabel" type="id" />
+    <item name="passbookPhotoButton" type="id" />
+    <item name="termsCheckBox" type="id" />
+    <item name="submitButton" type="id" />
+    <item name="gurmukhiButton" type="id" />
+</resources>
